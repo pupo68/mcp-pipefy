@@ -48,21 +48,30 @@ def main() -> None:
         auth_mode = "Service Account" if has_sa else "Personal Access Token"
         logger.info("Pipefy authentication mode configured: %s", auth_mode)
 
-    logger.info("Starting Pipefy MCP Server on %s:%s with toolsets='%s'...", host, port, toolsets)
+    use_stdio = "--stdio" in sys.argv
 
-    cmd = [
-        sys.executable,
-        "-m",
-        "pipefy_mcp.main",
-        "--profile",
-        "remote",
-        "--transport",
-        "http",
-        "--host",
-        host,
-        "--port",
-        port,
-    ]
+    if use_stdio:
+        logger.info("Starting Pipefy MCP Server in local STDIO mode for Antigravity/CLI...")
+        cmd = [
+            sys.executable,
+            "-m",
+            "pipefy_mcp.main",
+        ]
+    else:
+        logger.info("Starting Pipefy MCP Server on %s:%s with toolsets='%s'...", host, port, toolsets)
+        cmd = [
+            sys.executable,
+            "-m",
+            "pipefy_mcp.main",
+            "--profile",
+            "remote",
+            "--transport",
+            "http",
+            "--host",
+            host,
+            "--port",
+            port,
+        ]
 
     try:
         sys.exit(subprocess.call(cmd))

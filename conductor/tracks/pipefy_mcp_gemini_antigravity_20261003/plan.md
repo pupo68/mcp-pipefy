@@ -10,13 +10,13 @@
 - [x] Task: Conductor - User Manual Verification 'Environment & Scaffolding' (Protocol in workflow.md)
 
 ## Phase 2: Server Implementation & Verification Tooling
-- [ ] Task: Configure Pipefy MCP Server & Toolsets
-    - [ ] Create server launcher wrapper `src/run_server.py` ensuring host/port and `PIPEFY_MCP_TOOLSETS` enforcement
-    - [ ] Validate toolset filtering keeping active tools below 100
-- [ ] Task: Create MCP Client Test Script
-    - [ ] Implement `scripts/test_mcp_client.py` for testing JSON-RPC `initialize`, `tools/list`, and call tool against StreamableHTTP endpoint
-    - [ ] Verify local execution against mock or live credentials
-- [ ] Task: Conductor - User Manual Verification 'Server Implementation & Verification Tooling' (Protocol in workflow.md)
+- [x] Task: Configure Pipefy MCP Server & Toolsets
+    - [x] Create server launcher wrapper `src/run_server.py` ensuring host/port and `PIPEFY_MCP_TOOLSETS` enforcement
+    - [x] Validate toolset filtering keeping active tools below 100
+- [x] Task: Create MCP Client Test Script
+    - [x] Implement `scripts/test_mcp_client.py` for testing JSON-RPC `initialize`, `tools/list`, and call tool against StreamableHTTP endpoint
+    - [x] Verify local execution against mock or live credentials
+- [x] Task: Conductor - User Manual Verification 'Server Implementation & Verification Tooling' (Protocol in workflow.md)
 
 ## Phase 3: Integration & Deployment Guides
 - [ ] Task: Cloud Run Deployment Automation
