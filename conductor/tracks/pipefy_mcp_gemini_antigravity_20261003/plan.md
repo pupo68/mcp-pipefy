@@ -1,13 +1,13 @@
 # Implementation Plan: Pipefy MCP Server for Gemini Enterprise & Antigravity
 
 ## Phase 1: Environment & Scaffolding
-- [ ] Task: Setup Project Dependencies and Configuration
-    - [ ] Create `pyproject.toml` with `pipefy-mcp-server` and dependencies
-    - [ ] Create `.env.example` with Pipefy credentials and toolset configs
-    - [ ] Create `docker-compose.yml` for local containerized testing
-- [ ] Task: Build Optimized Dockerfile
-    - [ ] Create production-ready `Dockerfile` (Python 3.11-slim, StreamableHTTP entrypoint, $PORT dynamic binding)
-- [ ] Task: Conductor - User Manual Verification 'Environment & Scaffolding' (Protocol in workflow.md)
+- [x] Task: Setup Project Dependencies and Configuration
+    - [x] Create `pyproject.toml` with `pipefy-mcp-server` and dependencies
+    - [x] Create `.env.example` with Pipefy credentials and toolset configs
+    - [x] Create `docker-compose.yml` for local containerized testing
+- [x] Task: Build Optimized Dockerfile
+    - [x] Create production-ready `Dockerfile` (Python 3.11-slim, StreamableHTTP entrypoint, $PORT dynamic binding)
+- [x] Task: Conductor - User Manual Verification 'Environment & Scaffolding' (Protocol in workflow.md)
 
 ## Phase 2: Server Implementation & Verification Tooling
 - [ ] Task: Configure Pipefy MCP Server & Toolsets

@@ -1,0 +1,15 @@
+services:
+  pipefy-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pipefy-mcp-server
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - PORT=8080
+      - HOST=0.0.0.0
+      - PIPEFY_MCP_TOOLSETS=${PIPEFY_MCP_TOOLSETS:-cards,pipes,tables}
+    restart: unless-stopped

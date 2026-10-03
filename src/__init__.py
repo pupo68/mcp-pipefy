@@ -1,0 +1,1 @@
+"""Pipefy MCP Server package."""
