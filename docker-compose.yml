@@ -11,5 +11,5 @@ services:
     environment:
       - PORT=8080
       - HOST=0.0.0.0
-      - PIPEFY_MCP_TOOLSETS=${PIPEFY_MCP_TOOLSETS:-cards,pipes,tables}
+      - PIPEFY_MCP_TOOLSETS=${PIPEFY_MCP_TOOLSETS:-workflow,database}
     restart: unless-stopped

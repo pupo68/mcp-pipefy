@@ -27,7 +27,7 @@ logger = logging.getLogger("pipefy_mcp_runner")
 def main() -> None:
     host = os.getenv("HOST", "0.0.0.0")
     port = os.getenv("PORT", "8080")
-    toolsets = os.getenv("PIPEFY_MCP_TOOLSETS", "cards,pipes,tables")
+    toolsets = os.getenv("PIPEFY_MCP_TOOLSETS", "workflow,database")
 
     # Enforce toolset filtering in environment for Gemini Enterprise compliance
     os.environ["PIPEFY_MCP_TOOLSETS"] = toolsets

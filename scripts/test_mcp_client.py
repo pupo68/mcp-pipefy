@@ -12,6 +12,17 @@ import sys
 import httpx
 
 
+def _parse_mcp_response(res: httpx.Response) -> dict:
+    content_type = res.headers.get("content-type", "")
+    text = res.text.strip()
+    if "text/event-stream" in content_type or "data:" in text:
+        for line in text.splitlines():
+            line = line.strip()
+            if line.startswith("data:"):
+                return json.loads(line[5:].strip())
+    return res.json()
+
+
 def test_mcp_endpoint(base_url: str, auth_token: str | None = None) -> bool:
     endpoint = base_url.rstrip("/")
     if not endpoint.endswith("/mcp"):
@@ -52,7 +63,7 @@ def test_mcp_endpoint(base_url: str, auth_token: str | None = None) -> bool:
             print(f"[-] 'initialize' failed with status code {res.status_code}: {res.text}")
             return False
 
-        init_data = res.json()
+        init_data = _parse_mcp_response(res)
         server_info = init_data.get("result", {}).get("serverInfo", {})
         protocol_version = init_data.get("result", {}).get("protocolVersion", "unknown")
         print(f"[+] Initialize success!")
@@ -97,7 +108,7 @@ def test_mcp_endpoint(base_url: str, auth_token: str | None = None) -> bool:
             print(f"[-] 'tools/list' failed with status code {res.status_code}: {res.text}")
             return False
 
-        tools_data = res.json()
+        tools_data = _parse_mcp_response(res)
         tools = tools_data.get("result", {}).get("tools", [])
         tool_count = len(tools)
 
