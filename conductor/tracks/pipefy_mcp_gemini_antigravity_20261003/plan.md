@@ -19,10 +19,10 @@
 - [x] Task: Conductor - User Manual Verification 'Server Implementation & Verification Tooling' (Protocol in workflow.md)
 
 ## Phase 3: Integration & Deployment Guides
-- [ ] Task: Cloud Run Deployment Automation
-    - [ ] Create `deploy_cloud_run.ps1` and `deploy_cloud_run.sh` for one-click deployment to Google Cloud Run free tier
-- [ ] Task: Setup & Portfolio Documentation
-    - [ ] Create `docs/GEMINI_ENTERPRISE_SETUP.md` (Connecting Custom MCP Data Store in Vertex AI / Gemini Enterprise)
-    - [ ] Create `docs/ANTIGRAVITY_SETUP.md` (Configuring Antigravity MCP integration for free local use)
-    - [ ] Update root `README.md` showcasing the project architecture for portfolio
-- [ ] Task: Conductor - User Manual Verification 'Integration & Deployment Guides' (Protocol in workflow.md)
+- [x] Task: Cloud Run Deployment Automation
+    - [x] Create `deploy_cloud_run.ps1` and `deploy_cloud_run.sh` for one-click deployment to Google Cloud Run free tier
+- [x] Task: Setup & Portfolio Documentation
+    - [x] Create `docs/GEMINI_ENTERPRISE_SETUP.md` (Connecting Custom MCP Data Store in Vertex AI / Gemini Enterprise)
+    - [x] Create `docs/ANTIGRAVITY_SETUP.md` (Configuring Antigravity MCP integration for free local use)
+    - [x] Update root `README.md` showcasing the project architecture for portfolio
+- [x] Task: Conductor - User Manual Verification 'Integration & Deployment Guides' (Protocol in workflow.md)

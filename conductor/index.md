@@ -17,5 +17,5 @@ Bem-vindo ao projeto **Pipefy MCP Server** (Integração Gemini Enterprise & Ant
 
 ---
 
-- [~] **Track: Conectar o Gemini Enterprise e o Antigravity ao Pipefy via MCP**
+- [x] **Track: Conectar o Gemini Enterprise e o Antigravity ao Pipefy via MCP**
 *Link: [./tracks/pipefy_mcp_gemini_antigravity_20261003/](./tracks/pipefy_mcp_gemini_antigravity_20261003/)*
